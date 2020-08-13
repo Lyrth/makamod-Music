@@ -1,0 +1,14 @@
+
+plugins { id 'java-library' }
+
+project.version = '1.2'
+
+dependencies {
+    compile 'lyrth.makanism:Makanism.api'
+
+    extern 'com.sedmelluq:lavaplayer:1.3.50'
+}
+
+services {
+    provides 'lyrth.makanism.api.GuildModule' with 'makanism.module.music.Music'
+}
